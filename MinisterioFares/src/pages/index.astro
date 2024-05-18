@@ -1,24 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Ubicacion from '../components/Ubicacion.astro'
-import UltimaPredica from '../components/UltimaPredica.astro'
-import Actividades from '../components/Actividades.astro'
+import Ubicacion from '../components/Ubicacion.astro';
+import UltimaPredica from '../components/UltimaPredica.astro';
+import Actividades from '../components/Actividades.astro';
 
 import {Image} from 'astro:assets';
-import FacebookIcon from '../img/facebook.png'
+
+import VideoBackground from '../videos/VideoBackground.mp4'
+import FacebookIcon from '../img/facebook.png';
 ---
 
 <Layout>
 	<main class="background">
-		<Header/>
-		<section class="py-12 flex items-center flex-col">
-			<h1 class="text-white text-7xl font-black">UN <br>LUGAR PARA LA <span class="color">FAMILIA</span></h1>
-			<div class="facebook">
-				<Image src={FacebookIcon} alt='icono de Facebook'>
-			</div>
-		</section>
+		
+		<section class="mb-20">
+			<Header/>
+			<div>
+				<div class="flex justify-center items-center flex-col medidas">
+					<h1 class="text-white text-7xl font-bold z">UN <br>LUGAR PARA LA <span class="color font-black">FAMILIA</span></h1>
+					<!-- <div class="facebook z pt-12">
+						<Image src={FacebookIcon} alt='icono de Facebook'>
+					</div>-->
+				</div>
 
+	
+				<video muted loop autoplay>
+					<source src={VideoBackground} type="video/mp4">
+				</video>
+				<div class="capa">
+	
+				</div>
+			</div>
+
+		</section>
+	
 		<Ubicacion/>
 		<UltimaPredica/>
 		<Actividades/>
@@ -27,17 +43,44 @@ import FacebookIcon from '../img/facebook.png'
 
 <style>
 
-	.background{
-		background-image: url("../img/background.png");
-		background-position: center;
-		background-size: cover;
+	main{
+		background-color: black;
+	}
+
+	.z{
+		position: relative;
+		z-index: 2;
+	}
+
+	.medidas{
 		width: 100%;
-		height: 90vh;
+		height: 80vh;
 	}
 
 	section{
 		height: 90vh;
-		justify-content: space-around;
+		position: relative;
+	}
+
+	video{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.capa{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+
+		background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
 	}
 
 	.facebook{

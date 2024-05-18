@@ -1,14 +1,20 @@
-<section class="flex justify-center items-center text-center flex-col">
+---
+---
+
+<section class="flex justify-center items-center text-center flex-col pt-11" id="ubicacion">
     <h1 class="font-black text-4xl">MINISTERIO FARES</h1>
     <br>
     <h2 class="font-extrabold text-3xl color pb-4">Servicio Presencial:</h2>
     <h3 class="font-bold text-2xl">Miercoles 19:00 PM & Domingos 18:00 PM</h3>
     <p class="font-light pt-1 mb-10">(Hora de Argentina)</p>
 
-    <div class="apiubi my-11 rounded-xl">
-
+    <div class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d785.8046074885337!2d-57.60660873034667!3d-38.01868694170959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzjCsDAxJzA3LjMiUyA1N8KwMzYnMjEuNSJX!5e0!3m2!1ses-419!2sar!4v1715974190563!5m2!1ses-419!2sar" 
+        width="400" height="400" style="border-radius: 12px;" allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
+
 
 <style>
     section{
@@ -18,7 +24,6 @@
     .apiubi{
         width: 370px;
         height: 370px;
-        background-color: red;
     }
 
     .color{
@@ -27,5 +32,10 @@
     
     h3{
         width: 300px;
+    }
+
+    .mapa {
+	    height: auto;
+	    width: auto;
     }
 </style>
