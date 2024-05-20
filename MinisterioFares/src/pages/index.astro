@@ -4,11 +4,10 @@ import Header from '../components/Header.astro';
 import Ubicacion from '../components/Ubicacion.astro';
 import UltimaPredica from '../components/UltimaPredica.astro';
 import Actividades from '../components/Actividades.astro';
-
-import {Image} from 'astro:assets';
+import Footer from '../components/Footer.astro'
 
 import VideoBackground from '../videos/VideoBackground.mp4'
-import FacebookIcon from '../img/facebook.png';
+
 ---
 
 <Layout>
@@ -38,6 +37,7 @@ import FacebookIcon from '../img/facebook.png';
 		<Ubicacion/>
 		<UltimaPredica/>
 		<Actividades/>
+		<Footer/>
 	</main>
 </Layout>
 
@@ -48,6 +48,7 @@ import FacebookIcon from '../img/facebook.png';
 	}
 
 	.z{
+		width: 400px;
 		position: relative;
 		z-index: 2;
 	}
