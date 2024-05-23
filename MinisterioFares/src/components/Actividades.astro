@@ -5,18 +5,46 @@ import Imagen1 from '../img/1.jpg'
 import Imagen2 from '../img/1.jpg'
 import Imagen3 from '../img/1.jpg'
 
+import Cartas from './Cartas.astro';
 ---
  
 <section class="flex items-center flex-col">
-    <h1 class="font-black text-4xl">ACTIVIDADES</h1>
+    <Cartas
+        titulo = 'EVANGELISMO'
+        texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+        img = 'https://images.pexels.com/photos/6647037/pexels-photo-6647037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        alt = 'Ayudando a personas que lo necesitan'
+        />
+    <Cartas
+        titulo = 'JOVENES'
+        texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+        img = 'https://images.pexels.com/photos/3063478/pexels-photo-3063478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        alt = 'Jovenes contentos ante la presencia de Dios'
+        />
+    <Cartas
+        titulo = 'DANZA'
+        texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+        img = 'https://images.pexels.com/photos/7520744/pexels-photo-7520744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        alt = 'Equipo de danza para adorar a Dios'
+        />
 
-    <div class="carrusel">
-        
+    <div class="flex justify-center items-center flex-col py-20 px-13">
+        <h1 class="font-black text-3xl text-center mb-8">QUERES CONOCER MAS DE NUESTRAS ACTIVIDADES?</h1>
+        <p class="text-center mb-8" style="width: 400px;">En Fares tenemos muchas formas de acercarnos a Dios, descubrilas dando click en el boton de aca abajo.</p>
+        <input type="button" value="Otras Actividades" class="px-6 py-1 rounded-xl">
     </div>
 </section>
 
 <style>
     section{
-        height: 80vh;
+        height: auto;
+    }
+    input{
+        background-color: rgb(0, 107, 179);
+    }
+    input:hover{
+        background-color: rgb(0, 153, 255);
+        transition: all 0.5s;
+        cursor: pointer;
     }
 </style>
