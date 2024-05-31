@@ -3,135 +3,161 @@ import {Image} from 'astro:assets';
 import Logo from '../img/Fares-logo.png';
 import X from '../img/x.svg';
 ---
+<script>
+  const boton = document.getElementById('boton');
+  const contenido = document.getElementById('contenido');
+  
+  function Desplegar(){
+    if(contenido.classList.contains("desplegado")){
+      contenido.classList.remove('desplegado');
+    }
+    else{
+      contenido.classList.add('desplegado');
+    }
+  }
+
+  boton.addEventListener('click',Desplegar);
+</script>
 
 <header>
-	<nav>
-		<input type="checkbox" id="check">
-		<div class="logo">
-      <a href="index.astro"><Image src={Logo} alt='Logo de Fares'></Image></a>
-      </div>
-		<ul class="flex items-center justify-center">
-      <label for="check" class="cerrar checkbtn">
-        <Image src={X} alt='cerrar' class='x'></Image>
-      </label>
-      <div class="lista">
-        <li><a href="#ubicacion">Horarios</a></li>
-        <li><a href="#">Ultima Predica</a></li>
-        <li><a href="#">Actividades</a></li>
-        <li><a href="#">¿Quienes somos?</a></li>
-        <li><a href="#">Donar</a></li>
-        <li><a href="#">Contacto</a></li>
-      </div>
+    <div class="logo">
+      <a href="#inicio"><Image src={Logo} alt='Logo de Fares'></Image></a>
+    </div>
 
-		</ul>
-		<label for="check" class="checkbtn">
-			<i class="fas fa-bars"></i>
-		  </label>
-	  </nav>
-	  <section></section>
+    <div class="flex items-center contenido" id="contenido">
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#bienvenido">Bienvenido a Fares</a></li>
+          <li><a href="#ultimapredica">Ultima Predica</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#nuestrospastores">Nuestros Pastores</a></li>
+          <li><a href="#ubicacion">Ubicacion</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#dar">Dar</a></li>
+        </ul>
+      </nav>
+  
+      <div class="redes mx-10">
+        <a href="https://www.facebook.com/elpandiario"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0,0,256,256">
+          <g fill="#0085ff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,3c-12.15,0 -22,9.85 -22,22c0,11.03 8.125,20.137 18.712,21.728v-15.897h-5.443v-5.783h5.443v-3.848c0,-6.371 3.104,-9.168 8.399,-9.168c2.536,0 3.877,0.188 4.512,0.274v5.048h-3.612c-2.248,0 -3.033,2.131 -3.033,4.533v3.161h6.588l-0.894,5.783h-5.694v15.944c10.738,-1.457 19.022,-10.638 19.022,-21.775c0,-12.15 -9.85,-22 -22,-22z"></path></g></g>
+          </svg></a>
+      </div>
+    </div>
+
+
+    <button id="boton">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 72 72">
+        <path d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z"></path>
+        </svg>
+    </button>
 </header>
 
 <style>
-	*{
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-}
-
-header{
-  position: relative;
-  z-index: 4;
-}
-
-nav{
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-  width: 100%;
-}
-
-.logo{
-  width: 60px;
-  margin: 20px 0px;
-}
-
-nav ul{
-  float: right;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-nav ul li{
-	cursor: pointer;
-}
-nav ul li a{
-  font-size: 17px;
-  text-transform: uppercase;
-}
-a.active,a:hover{
-  transition: .5s;
-}
-.checkbtn{
-  font-size: 30px;
-  cursor: pointer;
-  display: none;
-}
-#check{
-  display: none;
-}
-@media (max-width: 952px){
-  label.logo{
-    font-size: 30px;
-    padding-left: 50px;
+  header{
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-around;
   }
-  nav ul li a{
-    font-size: 16px;
-  }
-}
-@media (max-width: 858px){
-  .checkbtn{
+  button{
     display: block;
   }
-  ul{
-    position: fixed;
+  .contenido{
+    display: none;
+  }
+  .logo{
+    display: block;
+    width: 60px;
+    margin: 10px 0px;
+  }
+
+  .desplegado{
     width: 100%;
-	  height: 100vh;
-    right: -750px;
-    top: 0px;
-    transition: all .5s;
-	  background-color: rgb(0, 0, 0, 0.9);
-  }
-  nav ul li{
-    text-align: center;
-	  padding: 20px;
-	  cursor: pointer;
-  }
-  nav ul li:hover{
-	background-color: rgb(5, 5, 5);
-    width: 700px;
-  }
-  nav ul li a{
-    font-size: 20px;
-  }
-  a:hover,a.active{
-    background: none;
-  }
-
-  #check:checked ~ header{
-    background-color: rgb(0, 0, 0, 0.9);
-  }
-
-  #check:checked ~ ul{
+    height: 90vh;
+    z-index: 6;
     display: flex;
-    right: 0px;
-    height: 100vh;
-  }
-}
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(22, 22, 22);
 
-.cerrar{
-  position: absolute;
-  top: 40px;
-}
+    .logo{
+      display: none;
+    }
+    nav{
+      width: 100%;
+      height: 100%;
+    }
+
+    li{
+      padding: 10px 0px;
+      background-color: red;
+    }
+
+    .redes{
+      margin-bottom: 40px;
+      bottom: 0px;
+    }
+  }
+
+  @media(min-width:1080px){
+    header{
+      position: sticky;
+      top: 0px;
+      z-index: 6;
+      width: 100%;
+      height: auto;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      
+      animation: header-pegado linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 200px;
+    }
+
+
+    @keyframes header-pegado {
+        to{
+          background: rgba(255, 255, 255, 0.4);
+          backdrop-filter: blur(5px);
+          height: 50px;
+        }
+    }
+
+    .contenido{
+    display: flex;
+  }
+    .logo{
+      display: block;
+      width: 60px;
+      margin: 10px 50px;
+    }
+    ul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li a{
+      color: black;
+      font-size: 13px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    a:hover{
+      background-color: rgb(221, 221, 221);
+      transform: all 0.5s;
+    }
+    svg{
+      cursor: pointer;
+    }
+    button{
+      display: none;
+    }
+  }
 </style>

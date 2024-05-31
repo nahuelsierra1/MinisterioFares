@@ -9,7 +9,7 @@ interface Props{
 const { titulo, texto, img, alt} = Astro.props
 ---
 
-<div class="px-10 py-8 section">
+<div class="px-14 py-10 section">
     <div class="contenido">
         <h1 class="font-black text-2xl">{titulo}</h1>
         <p class="font-extralight mt-4">{texto}</p>
@@ -56,7 +56,7 @@ const { titulo, texto, img, alt} = Astro.props
             transition: all 0.5s;
         }
         p{
-            font-size: 110%;
+            font-size: 105%;
             transition: all 0.5s;
         }
         .capa{
@@ -68,6 +68,60 @@ const { titulo, texto, img, alt} = Astro.props
         background-color: rgb(0, 153, 255);
         transition: all 0.5s;
         cursor: pointer;
+    }
+
+    @media (min-width: 1080px){
+        .capa{
+            position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+            background: rgb(0,0,0);
+            background: linear-gradient(00deg, rgb(0, 0, 0) 0%, rgba(0, 119, 255, 0.253) 100%);
+        }
+        .contenido{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        .contenido h1{
+            display: flex;
+            font-size: 50px;
+        }
+        .contenido p{
+            display: none;
+        }
+        .contenido input{
+            display: none;
+        }
+        .section{
+            width: 400px;
+            height: 400px;
+        }
+        .section:hover{
+            transition: all 0.5s;
+
+            .contenido{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            transition: all 0.5s;
+            }
+            .capa{
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.897) 100%, rgba(210,6,6,0) 100%);
+            transition: all 0.5s;
+            }
+            .contenido p{
+            display: block;
+            }
+            .contenido input{
+            display: block;
+            }
+        }
     }
     
 </style>

@@ -7,44 +7,204 @@ import Imagen3 from '../img/1.jpg'
 
 import Cartas from './Cartas.astro';
 ---
+
+<script>
+    const boton = document.getElementById('boton');
+    const cartas = document.getElementById('cartas');
+
+    function Estirar(){
+        if(cartas.classList.contains('estirar') == false){
+            cartas.classList.add('estirar');
+            cartas.style['transition'] = 'all 0.5s';
+        }else{
+            cartas.style['transition'] = 'all 0.5s';
+            cartas.classList.remove('estirar');
+        }
+
+    }
+
+    boton.addEventListener('click', Estirar);
+</script>
  
-<section class="flex items-center flex-col">
-    <Cartas
+<section class="flex items-center flex-col" id="bienvenido">
+    <div class="cartas" id="cartas">
+        <Cartas
         titulo = 'EVANGELISMO'
         texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
-        img = 'https://images.pexels.com/photos/6647037/pexels-photo-6647037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/431170406_7302369339846972_1606835753245825149_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=j2fjrH6Z-8cQ7kNvgG8SCuF&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYCJ-PwFxx5_GmWebf-gnbcM-uIN7GhwCzgin4xI1aZfJQ&oe=665BDD65'
         alt = 'Ayudando a personas que lo necesitan'
         />
     <Cartas
         titulo = 'JOVENES'
         texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
-        img = 'https://images.pexels.com/photos/3063478/pexels-photo-3063478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/424926643_7212180642199176_2995834662221754224_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=L7uq7n7ejx8Q7kNvgHIKQgX&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYDPVmoKR75wU8X_Shh4a9u3rprUoE4dx-35pbygKhRLxQ&oe=6657BCC7'
         alt = 'Jovenes contentos ante la presencia de Dios'
         />
     <Cartas
         titulo = 'DANZA'
         texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
-        img = 'https://images.pexels.com/photos/7520744/pexels-photo-7520744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/427892846_786014107043191_7971232154969115810_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=6ZtoNdbvbJsQ7kNvgFwybzD&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYDo5CeF_CzPm98KL8hnzm3h0plM65aO1a0Q18BydZvh6g&oe=665FC135'
         alt = 'Equipo de danza para adorar a Dios'
         />
+    <Cartas
+        titulo = 'ALTAR'
+        texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+        img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/441867333_786016367042965_8087096792568848814_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=mwRpJ8l8DSAQ7kNvgF1CsEl&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYCCFTi4xFtL4UHHBZjBsGCKHRzVQtiJDW2FQXE-k8yOqA&oe=665FB669'
+        alt = 'Equipo de danza para adorar a Dios'
+        />
+    <Cartas
+        titulo = 'INTERSECION'
+        texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+        img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/434981096_764984705812798_3875151549638381641_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=YQ0qx7_4jcUQ7kNvgGSZ_7v&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYCULEljYn8H-Ppz8tRwFSteaGndY-qGG9vmLE59jkcYRw&oe=665FD350'
+        alt = 'Equipo de danza para adorar a Dios'
+        />
+    </div>
 
-    <div class="flex justify-center items-center flex-col py-20 px-13">
-        <h1 class="font-black text-3xl text-center mb-8">QUERES CONOCER MAS DE NUESTRAS ACTIVIDADES?</h1>
-        <p class="text-center mb-8" style="width: 400px;">En Fares tenemos muchas formas de acercarnos a Dios, descubrilas dando click en el boton de aca abajo.</p>
-        <input type="button" value="Otras Actividades" class="px-6 py-1 rounded-xl">
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide">
+                <Cartas
+                titulo = 'EVANGELISMO'
+                texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+                img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/431170406_7302369339846972_1606835753245825149_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=j2fjrH6Z-8cQ7kNvgG8SCuF&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYCJ-PwFxx5_GmWebf-gnbcM-uIN7GhwCzgin4xI1aZfJQ&oe=665BDD65'
+                alt = 'Ayudando a personas que lo necesitan'
+                />
+            </div>
+            <div class="slide">
+                <Cartas
+                titulo = 'JOVENES'
+                texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+                img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/424926643_7212180642199176_2995834662221754224_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=L7uq7n7ejx8Q7kNvgHIKQgX&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYDPVmoKR75wU8X_Shh4a9u3rprUoE4dx-35pbygKhRLxQ&oe=6657BCC7'
+                alt = 'Jovenes contentos ante la presencia de Dios'
+                />
+            </div>
+            <div class="slide">
+                <Cartas
+                titulo = 'DANZA'
+                texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+                img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/427892846_786014107043191_7971232154969115810_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=6ZtoNdbvbJsQ7kNvgFwybzD&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYDo5CeF_CzPm98KL8hnzm3h0plM65aO1a0Q18BydZvh6g&oe=665FC135'
+                alt = 'Equipo de danza para adorar a Dios'
+                />
+            </div>
+            <div class="slide">
+                <Cartas
+                titulo = 'ALTAR'
+                texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+                img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/441867333_786016367042965_8087096792568848814_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=mwRpJ8l8DSAQ7kNvgF1CsEl&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYCCFTi4xFtL4UHHBZjBsGCKHRzVQtiJDW2FQXE-k8yOqA&oe=665FB669'
+                alt = 'Equipo de danza para adorar a Dios'
+                />
+            </div>
+            <div class="slide">
+                <Cartas
+                titulo = 'INTERSECION'
+                texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+                img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/434981096_764984705812798_3875151549638381641_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=YQ0qx7_4jcUQ7kNvgGSZ_7v&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYCULEljYn8H-Ppz8tRwFSteaGndY-qGG9vmLE59jkcYRw&oe=665FD350'
+                alt = 'Equipo de danza para adorar a Dios'
+                />
+            </div>
+
+            <div class="slide">
+                <Cartas
+                titulo = 'EVANGELISMO'
+                texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+                img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/431170406_7302369339846972_1606835753245825149_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=j2fjrH6Z-8cQ7kNvgG8SCuF&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYCJ-PwFxx5_GmWebf-gnbcM-uIN7GhwCzgin4xI1aZfJQ&oe=665BDD65'
+                alt = 'Ayudando a personas que lo necesitan'
+                />
+            </div>
+            <div class="slide">
+                <Cartas
+                titulo = 'JOVENES'
+                texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+                img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/424926643_7212180642199176_2995834662221754224_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=L7uq7n7ejx8Q7kNvgHIKQgX&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYDPVmoKR75wU8X_Shh4a9u3rprUoE4dx-35pbygKhRLxQ&oe=6657BCC7'
+                alt = 'Jovenes contentos ante la presencia de Dios'
+                />
+            </div>
+            <div class="slide">
+                <Cartas
+                titulo = 'DANZA'
+                texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+                img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/427892846_786014107043191_7971232154969115810_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=6ZtoNdbvbJsQ7kNvgFwybzD&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYDo5CeF_CzPm98KL8hnzm3h0plM65aO1a0Q18BydZvh6g&oe=665FC135'
+                alt = 'Equipo de danza para adorar a Dios'
+                />
+            </div>
+            <div class="slide">
+                <Cartas
+                titulo = 'ALTAR'
+                texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+                img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/441867333_786016367042965_8087096792568848814_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=mwRpJ8l8DSAQ7kNvgF1CsEl&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYCCFTi4xFtL4UHHBZjBsGCKHRzVQtiJDW2FQXE-k8yOqA&oe=665FB669'
+                alt = 'Equipo de danza para adorar a Dios'
+                />
+            </div>
+            <div class="slide">
+                <Cartas
+                titulo = 'INTERSECION'
+                texto = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam doloremque facere consequatur deleniti nihil hic inventore.'
+                img = 'https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/434981096_764984705812798_3875151549638381641_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=YQ0qx7_4jcUQ7kNvgGSZ_7v&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYCULEljYn8H-Ppz8tRwFSteaGndY-qGG9vmLE59jkcYRw&oe=665FD350'
+                alt = 'Equipo de danza para adorar a Dios'
+                />
+            </div>
+        </div>
     </div>
 </section>
 
 <style>
+    .slider{
+        display: none;
+    }
     section{
-        height: auto;
+    }
+    .cartas{
+        display: block;
+        height: 790px;
+        overflow: hidden;
     }
     input{
-        background-color: rgb(0, 107, 179);
+        background-color: rgb(0, 153, 255);
     }
     input:hover{
-        background-color: rgb(0, 153, 255);
+        background-color: rgb(90, 189, 255);
         transition: all 0.5s;
         cursor: pointer;
+    }
+    .estirar{
+        height: 1340px;
+    }
+
+    @media (min-width: 1080px){
+        .cartas{
+            display: none;
+        }
+        .contenido{
+            margin: 100px 0px;
+        }
+        .slider {
+            width: 100%;
+            height: auto;
+            margin: auto;
+            overflow: hidden;
+            display: block;
+        }
+
+        .slider .slide-track {
+            display: flex;
+            animation: scroll 40s linear infinite;
+            -webkit-animation: scroll 40s linear infinite;
+            width: calc(200px * 14);
+        }
+
+        .slider .slide {
+            width: 100%;
+        }
+
+        @keyframes scroll {
+            0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            100% {
+                -webkit-transform: translateX(calc(0px * 7));
+                transform: translateX(calc(-200px * 7));
+            }
+        }
     }
 </style>

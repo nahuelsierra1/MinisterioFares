@@ -1,41 +1,56 @@
 
-<footer class="flex justify-center flex-col px-20">
-    <div class="Horarios-footer mb-10">
-        <h1 class="font-extrabold text-3xl mb-6" style="max-width: 400px;">MIERCOLES 19:00 PM Y DOMINGOS 18:00 PM</h1>
-        <p class="font-light">Av. Fortunato de la Plaza 2700, Mar del Plaa, Buenos Aires, Argentina.</p>
+<footer class="flex justify-center flex-col" id="contacto">
+    <div class="contenido">
+        <div class="Horarios-footer mb-10 x">
+            <h1 class="font-extrabold text-3xl mb-6 " style="max-width: 400px;">MIERCOLES 19:00 PM Y DOMINGOS 18:00 PM</h1>
+            <p class="font-light " style="width: 250px;">Av. Fortunato de la Plaza 2700, Mar del Plaa, Buenos Aires, Argentina.</p>
+        </div>
+    
+        <div class="Contacto-footer mb-10 x">
+            <h1 class="font-extrabold text-3xl mb-6 ">CONTACTO</h1>
+            <div class="mail">
+                <i class="fa fa-envelope" aria-hidden="true"></i><span class=""> ministeriofares@gmail.com</span>
+            </div>
+            <div class="facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                  </svg><span class=""> ministeriofares</span>
+            </div>
+        </div>
     </div>
 
-    <div class="Contacto-footer mb-10">
-        <h1 class="font-extrabold text-3xl mb-6">CONTACTO</h1>
-        <div class="mail">
-            <i class="fa fa-envelope" aria-hidden="true"></i><span> ministeriofares@gmail.com</span>
-        </div>
-        <div class="facebook">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-              </svg><span> ministeriofares</span>
-        </div>
-    </div>
 
-    <div class="Donaciones-footer mb-10">
-        <h1 class="font-extrabold text-3xl mb-6">DONACIONES</h1>
-        <div class="flex flex-col">
-            <p><span class="font-bold">CVU</span> 9123124145632</p>
-            <p><span class="font-bold">Alias</span> ministerio.fares</p>
-            <p><span class="font-bold">Nombre</span> Ministerio Fares</p>
-        </div>
-    </div>
-    <hr>
-    <div class="creador mt-10 text-center">
-        <p class="mb-3">Hecho por <span class="font-bold">Sierras</span></p>
-        <p>©2024 Sierras, Todos los derechos reservados</p>
-    </div>
 </footer>
+<div class="creador text-center ">
+    <p class="">Hecho por <span class="font-bold">Sierras</span></p>
+    <p class="">©2024 Sierras, Todos los derechos reservados</p>
+</div>
 
 <style>
     footer{
-        background-color: #0B0B0B;
+        background-color: rgb(7, 7, 7);
         width: 100%;
         height: 100vh;
     }
+    @media (min-width: 1080px){
+        .contenido{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        footer{
+            height: auto;
+            padding: 100px 0px;
+        }
+        .creador{
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(0, 0, 0);
+        }
+    }
+
 </style>
