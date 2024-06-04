@@ -22,7 +22,7 @@
 
 </footer>
 <div class="creador text-center ">
-    <p class="">Hecho por <span class="font-bold">Sierras</span></p>
+    <p class="sierras">Hecho por <span class="font-bold">Sierras</span></p>
     <p class="">©2024 Sierras, Todos los derechos reservados</p>
 </div>
 
@@ -30,8 +30,21 @@
     footer{
         background-color: rgb(7, 7, 7);
         width: 100%;
-        height: 100vh;
+        height: 80vh;
+        align-items: center;
     }
+    .creador{
+            height: auto;
+            padding: 30px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(0, 0, 0);
+        }
+        .sierras{
+            margin-bottom:12px;
+        }
+
     @media (min-width: 1080px){
         .contenido{
             display: flex;
@@ -50,6 +63,9 @@
             justify-content: space-around;
             align-items: center;
             background-color: rgb(0, 0, 0);
+        }
+        .sierras{
+            margin: 0px;
         }
     }
 

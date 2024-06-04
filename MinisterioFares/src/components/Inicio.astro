@@ -24,7 +24,7 @@ import VideoBackground from '../videos/VideoBackground.mp4'
 	section{
 		height: 100vh;
 		position: relative;
-		padding: 0px 100px;
+		padding: 0px 40px;
 	}
 
 	video{
@@ -38,6 +38,14 @@ import VideoBackground from '../videos/VideoBackground.mp4'
 
 	h1{
 		line-height: 0.8;
+		font-size: 100px;
+		position: absolute;
+		top: 200px;
+		left: 0px;
+		animation-duration: 1.4s;
+		animation-name: slidein;
+		animation-delay: 0.5s;
+
 	}
 
 	.color{
@@ -45,6 +53,12 @@ import VideoBackground from '../videos/VideoBackground.mp4'
 	}
 	
 	@media (min-width: 1080px){
+
+		section{
+		height: 100vh;
+		position: relative;
+		padding: 0px 100px;
+	}
 		h1{
 			font-size: 150px;
 			position: absolute;

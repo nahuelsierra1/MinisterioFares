@@ -6,6 +6,7 @@ import X from '../img/x.svg';
 <script>
   const boton = document.getElementById('boton');
   const contenido = document.getElementById('contenido');
+  const enlace = document.querySelectorAll('.enlace');
   
   function Desplegar(){
     if(contenido.classList.contains("desplegado")){
@@ -15,26 +16,31 @@ import X from '../img/x.svg';
       contenido.classList.add('desplegado');
     }
   }
+  enlace.forEach(function(elemento) {
+    elemento.addEventListener('click', function() {
+      contenido.classList.remove('desplegado');
+    });
+});
 
   boton.addEventListener('click',Desplegar);
 </script>
 
 <header>
-    <div class="logo">
+    <div class="logo" id="logo">
       <a href="#inicio"><Image src={Logo} alt='Logo de Fares'></Image></a>
     </div>
 
     <div class="flex items-center contenido" id="contenido">
       <nav>
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#bienvenido">Bienvenido a Fares</a></li>
-          <li><a href="#ultimapredica">Ultima Predica</a></li>
-          <li><a href="#eventos">Eventos</a></li>
-          <li><a href="#nuestrospastores">Nuestros Pastores</a></li>
-          <li><a href="#ubicacion">Ubicacion</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-          <li><a href="#dar">Dar</a></li>
+          <li><a href="#inicio" class="enlace">Inicio</a></li>
+          <li><a href="#bienvenido" class="enlace">Bienvenido a Fares</a></li>
+          <li><a href="#ultimapredica" class="enlace">Ultima Predica</a></li>
+          <li><a href="#eventos" class="enlace">Eventos</a></li>
+          <li><a href="#nuestrospastores" class="enlace">Nuestros Pastores</a></li>
+          <li><a href="#ubicacion" class="enlace">Ubicacion</a></li>
+          <li><a href="#contacto" class="enlace">Contacto</a></li>
+          <li><a href="#dar" class="enlace">Dar</a></li>
         </ul>
       </nav>
   
@@ -57,43 +63,83 @@ import X from '../img/x.svg';
   header{
     position: sticky;
     top: 0px;
+    z-index: 6;
     display: flex;
     justify-content: space-around;
+          
+    animation: header-pegado linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 10px;
   }
+  @keyframes header-pegado {
+        to{
+          background: rgb(255, 255, 255);
+          height: 50px;
+        }
+    }
   button{
     display: block;
   }
   .contenido{
     display: none;
+    right: -1000px;
+    transition: ease 0.5s;
   }
   .logo{
     display: block;
     width: 60px;
     margin: 10px 0px;
+
+    animation: logo-chico linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 10px;
   }
+  @keyframes logo-chico {
+        to{
+          width: 40px;
+          margin: 5px 0px;
+        }
+    }
 
   .desplegado{
+    position: absolute;
+    top: 80px;
+    right: 0px;
     width: 100%;
-    height: 90vh;
+    height: 92vh;
     z-index: 6;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    background-color: rgb(22, 22, 22);
+    background-color: rgba(0, 0, 0, 0.938);
+    transition: ease 0.5s;
 
-    .logo{
-      display: none;
-    }
+    animation: acomodar-desplegado linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 10px;
+
     nav{
       width: 100%;
       height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     li{
-      padding: 10px 0px;
-      background-color: red;
+      padding: 20px 0px;
+    }
+
+    li:hover{
+      font-weight: bolder;
+    }
+
+    a{
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px;
     }
 
     .redes{
@@ -101,6 +147,13 @@ import X from '../img/x.svg';
       bottom: 0px;
     }
   }
+  @keyframes acomodar-desplegado {
+        to{
+          top: 50px;
+          width: 100%;
+          height: 95vh;
+        }
+    }
 
   @media(min-width:1080px){
     header{
@@ -117,7 +170,7 @@ import X from '../img/x.svg';
       
       animation: header-pegado linear both;
       animation-timeline: scroll(root);
-      animation-range: 0 200px;
+      animation-range: 0 10px;
     }
 
 
@@ -131,12 +184,24 @@ import X from '../img/x.svg';
 
     .contenido{
     display: flex;
-  }
+    }
+
     .logo{
       display: block;
       width: 60px;
       margin: 10px 50px;
+      animation: logo-grande linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 10px;
     }
+    @keyframes logo-grande {
+        to{
+          width: 40px;
+          margin: 0px 50px;
+        }
+    }
+    
+    
     ul{
       display: flex;
       justify-content: center;
