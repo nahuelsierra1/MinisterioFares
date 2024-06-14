@@ -1,20 +1,16 @@
 ---
 ---
 
-<section class="py-20 px-10 flex flex-col justify-center items-center" id="nuestrospastores">
+<section class="" id="nuestrospastores">
     <div class="texto">
-        <h1 class="font-black text-4xl text-center text-black">CONOCE A NUESTROS PASTORES</h1>
-        <h3 class="font-bold text-xl text-center text-black">LUIS MANSILLA Y MAGALI JOHNSON</h3>
+        <h2 class="font-black text-4xl text-center text-black">CONOCE A NUESTROS PASTORES</h1>
+        <h3 class="font-semibold text-xl text-center text-black">LUIS MANSILLA Y MAGALI JOHNSON</h3>
 
-        <p class="font-light text-black">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A nisi tenetur unde dolorem! Quo obcaecati minima, corrupti assumenda rem a soluta. Vero, dicta. Dolorem facere iure ex ut, ratione enim?
-            Eius atque, mollitia facilis dolorum asperiores dicta unde aliquid esse labore ipsa voluptatum officia recusandae soluta itaque totam quod neque maxime! In mollitia laborum voluptates rem dolorem, quas at magni.</p>
+        <p class="font-light text-black">El Pastor Luis Mansilla y la Profeta Magali Johnson forman un equipo de liderazgo dinámico y comprometido en nuestra iglesia. Con más de 15 años de experiencia en el ministerio, el Pastor Luis es conocido por su enfoque pastoral y su dedicación a la enseñanza bíblica, trabajando incansablemente para fortalecer la fe y la unidad en nuestra comunidad.
+
+            <br>La Profeta Magali, con su don profético y su pasión por el servicio, inspira y apoya espiritualmente a todos, ayudando a descubrir su propósito en Dios. Juntos, combinan sus talentos y su visión para guiar y nutrir a nuestra congregación, creando un ambiente de amor, respeto y crecimiento espiritual.</p>
     </div>
-
-    <div class="imagen">
-        <img src="https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/327725923_881338483016515_5721634879161143505_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=hLvJxaSnOiEQ7kNvgE3a40I&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYDWqEAJFKWiYH5dmuMXFSqUP6RFjbAa8_ojJfqYSBbAEQ&oe=665FF440" alt="">
-    </div>
-
-
+    <div class="imagen"></div>
 </section>
 
 <style>
@@ -22,41 +18,36 @@
         height: auto;
         background-color: white;
     }
-    .imagen{
-        margin-right: 30px;
-    }
-    h1{
-        margin-bottom: 15px;
-    }
-    p{
-        margin: 40px;
-        text-align: left;
-    }
-    img{
-            width: 400px;
-            height: 380px;
-            border-radius: 100%;
-        }
     @media (min-width: 1080px){
         section{
             display: flex;
-            flex-direction: row-reverse;
             height: 100vh;
+            background-color: rgb(245, 245, 237);
         }
-        .texto h1{
-            text-align: left;
+        .texto{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
         }
-        .texto h3{
-            text-align: left;
-
+        h2{
+            font-size: 50px;
+            margin-bottom: 20px;
+            width: 600px;
+            line-height: 50px;
         }
-        .texto p{
-            width: 500px;
+        h3{
+            font-size: 30px;
         }
-        img{
-            width: 500px;
-            height: 500px;
-            border-radius: 100%;
+        p{
+            margin-top: 70px;
+            width: 600px;
+            font-size: 20px;
+        }
+        .imagen{
+            width: 50%;
+            background-color: red;
         }
     }
 </style>

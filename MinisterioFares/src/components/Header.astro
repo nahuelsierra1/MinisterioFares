@@ -34,9 +34,9 @@ import X from '../img/x.svg';
       <nav>
         <ul>
           <li><a href="#inicio" class="enlace">Inicio</a></li>
-          <li><a href="#bienvenido" class="enlace">Bienvenido a Fares</a></li>
           <li><a href="#ultimapredica" class="enlace">Ultima Predica</a></li>
           <li><a href="#eventos" class="enlace">Eventos</a></li>
+          <li><a href="#actividades" class="enlace">Actividades</a></li>
           <li><a href="#nuestrospastores" class="enlace">Nuestros Pastores</a></li>
           <li><a href="#ubicacion" class="enlace">Ubicacion</a></li>
           <li><a href="#contacto" class="enlace">Contacto</a></li>
@@ -140,6 +140,7 @@ import X from '../img/x.svg';
       text-transform: uppercase;
       font-weight: bold;
       font-size: 20px;
+      color: white;
     }
 
     .redes{
@@ -162,7 +163,7 @@ import X from '../img/x.svg';
       z-index: 6;
       width: 100%;
       height: auto;
-      background-color: white;
+      background-color: black;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -176,7 +177,7 @@ import X from '../img/x.svg';
 
     @keyframes header-pegado {
         to{
-          background: rgba(255, 255, 255, 0.4);
+          background: rgba(0, 0, 0, 0.4);
           backdrop-filter: blur(5px);
           height: 50px;
         }
@@ -208,14 +209,14 @@ import X from '../img/x.svg';
       align-items: center;
     }
     nav ul li a{
-      color: black;
+      color: white;
       font-size: 13px;
       padding: 10px 20px;
       border-radius: 10px;
       text-align: center;
     }
     a:hover{
-      background-color: rgb(221, 221, 221);
+      background-color: rgb(3, 3, 3);
       transform: all 0.5s;
     }
     svg{
