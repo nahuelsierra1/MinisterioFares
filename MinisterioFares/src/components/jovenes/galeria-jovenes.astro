@@ -1,0 +1,64 @@
+---
+import Lista from './lista-jovenes.astro'
+---
+<section>
+    <div class="texto flex justify-center items-center flex-col py-20">
+        <h2 class="font-black text-4xl text-black mb-4 text-center">GALERIA</h2>
+        <p class="font-light text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <button class="bg-red-500 py-2 px-5 rounded mt-20 text-white font-semibold">Todas las fotos</button>
+    </div>
+    <div class="lista">
+        <ul class="flex">
+            <Lista
+                titulo = 'TABERNACULO'
+                img = 'https://images.pexels.com/photos/7569011/pexels-photo-7569011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                alt = ''
+                href = ''
+            />
+            <Lista
+                titulo = 'EVANGELISMO'
+                img = 'https://images.pexels.com/photos/2961967/pexels-photo-2961967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                alt = ''
+                href = ''
+            />
+            <Lista
+                titulo = 'SIERRAS DE LOS PADRES'
+                img = 'https://images.pexels.com/photos/6271640/pexels-photo-6271640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                alt = ''
+                href = ''
+            />
+            <Lista
+                titulo = 'REUNION'
+                img = 'https://images.pexels.com/photos/4841970/pexels-photo-4841970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                alt = ''
+                href = ''
+            />
+            <Lista
+                titulo = 'BUENOS AIRES'
+                img = 'https://images.pexels.com/photos/8759844/pexels-photo-8759844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                alt = ''
+                href = ''
+            />
+        </ul>
+    </div>
+</section>
+<style>
+    @media (min-width: 1080px){
+        section{
+        display: block;
+        height: auto;
+        margin-bottom: 150px;
+    }
+    .lista{
+        width: 100%;
+        height: 200px;
+    }
+    ul{
+        width: 100%;
+    }
+    p{
+        width: 400px;
+        font-size: 20px;
+    }
+    }
+</style>

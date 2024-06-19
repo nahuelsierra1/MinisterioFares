@@ -1,0 +1,31 @@
+---
+import Header from "../Header.astro"
+import VideoBackground from '../../videos/VideoBackground.mp4'
+---
+<Header/>
+<section class="flex justify-around">
+
+    <div class="texto flex flex-col justify-center">
+        <h2 class="font-black text-9xl text-white">MOVIMIENTO <br> JUVENIL</h2>
+        <h3 class="text-3xl text-white mt-5 font-semibold">Acercandonos a Cristo</h3>
+    </div>
+
+    <video muted loop autoplay>
+        <source src='https://videos.pexels.com/video-files/5365340/5365340-uhd_2732_1440_25fps.mp4' type="video/mp4">
+    </video>
+</section>
+<style>
+    section{
+        height: 600px;
+        overflow: hidden;
+    }
+    video{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 680px;
+		object-fit: cover;
+        z-index: -1;
+	}
+</style>

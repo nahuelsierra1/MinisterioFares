@@ -1,0 +1,45 @@
+---
+import ListaJovenes from "./listaEventos-jovenes.astro"
+---
+<section class="py-20">
+    <div class="texto flex justify-center items-center flex-col py-20">
+        <h2 class="text-white font-black text-4xl text-center mb-10">PROXIMOS EVENTOS EN JOVENES</h2>
+        <p class="text-white text-center font-light">En Movimineto Juvenil Fares tenemos todo tipo de eventos para nuestros jovenes, miralos aca.</p>
+    </div>
+    <div class="lista">
+        <ul class="flex justify-between">
+            <ListaJovenes
+                img="https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/448497197_807470834897518_5814945589577876069_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEstcYy1FHO_A5WUcNf4ucVU9fm7d5RerdT1-bt3lF6t_1rhrC1t8rGizbH31nljPGXzjG022BBUnLxBPPKZ2pH&_nc_ohc=ZvELs7TypxcQ7kNvgGENaYx&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYDZyzK_0WkBQE__g7_wh_kzbo3P07dWocgxcT8M1PP0KQ&oe=6677DC0C"
+                alt=""
+                />
+            <ListaJovenes
+                img="https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/448494633_806854154959186_2235835291899943057_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHl_VBLi2Jo3fmbVm1ohtg3pUDMNXOg5T6lQMw1c6DlPqxtfh2HA8CoanPQbIkAseGIMbtbND_0QT0pvNei0i1N&_nc_ohc=6wxYVbMBf7gQ7kNvgGHz46S&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYB_88QeuKvlGI3oY7zlJOLRvlsJ7c-oibVuyw_UsdFr5g&oe=6677D707"
+                alt=""
+                />
+            <ListaJovenes
+                img="https://scontent.fmdq3-1.fna.fbcdn.net/v/t39.30808-6/435102134_766578535653415_1634027437151577606_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFsz419CfElnIbMbqEOYaqcVE1rExIMLY9UTWsTEgwtj60WYU-4NQ1OL12cwToHvYsm-WZw5TS9vkwmiKdY5XPZ&_nc_ohc=l7lcLsmrGGQQ7kNvgEnb1V7&_nc_ht=scontent.fmdq3-1.fna&oh=00_AYBCaf5VJ5xaqICUZyva94dFV84IJ8AXqq9AL7iUE9ZmLg&oe=6677CBD3"
+                alt=""
+                />
+        </ul>
+    </div>
+</section>
+<style>
+    @media(min-width: 1080px){
+        section{
+        position: relative;
+        height: 1100px;
+        background-color: black;
+    }
+    p{
+        width: 400px;
+        font-size: 20px;
+    }
+    .lista{
+        width: 80%;
+        margin: auto;
+    }
+    ul{
+    
+    }
+    }
+</style>
