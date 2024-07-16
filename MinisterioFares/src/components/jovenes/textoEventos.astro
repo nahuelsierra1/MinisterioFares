@@ -1,0 +1,17 @@
+---
+interface Props{
+    h2: string
+    p: string
+}
+
+const {h2, p} = Astro.props
+---
+
+<h2 class="text-white font-black text-4xl text-center mb-10">{h2}</h2>
+<p class="text-white text-center font-light">{p}</p>
+<style>
+    p{
+        width: 400px;
+        font-size: 20px;
+    }
+</style>

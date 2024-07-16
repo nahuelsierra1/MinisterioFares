@@ -1,0 +1,54 @@
+---
+import Header from "../components/Header.astro"
+---
+<Header/>
+<section>
+    <div class="banner justify-around flex items-center">
+        <a href=""></a>
+        <div class="texto flex flex-col items-center">
+            <h2 class="font-black text-9xl text-white">SIERRAS DE LOS PADRES</h2>
+            <h3 class="text-3xl text-white mt-5 font-semibold">Galeria</h3>
+        </div>
+        <a href=""><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></a>
+    </div>
+    <div class="lista">
+        <ul>
+            <li><img src="#" alt=""></li>
+            <li><img src="#" alt=""></li>
+            <li><img src="#" alt=""></li>
+            <li><img src="#" alt=""></li>
+            <li><img src="#" alt=""></li>
+            <li><img src="#" alt=""></li>
+            <li><img src="#" alt=""></li>
+            <li><img src="#" alt=""></li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    @media(min-width: 1080px){
+        section{
+            
+        }
+        .banner{
+            width: 100%;
+            height: 300px;
+            background-color: red;
+        }
+        .lista{
+            padding: 100px;
+        }
+        ul{
+            background-color: green;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        li{
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+        }
+    }
+</style>

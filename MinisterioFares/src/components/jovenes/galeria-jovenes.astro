@@ -10,10 +10,10 @@ import Lista from './lista-jovenes.astro'
     <div class="lista">
         <ul class="flex">
             <Lista
-                titulo = 'TABERNACULO'
+                titulo = 'CONGRESO'
                 img = 'https://images.pexels.com/photos/7569011/pexels-photo-7569011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
                 alt = ''
-                href = ''
+                href = '/congreso'
             />
             <Lista
                 titulo = 'EVANGELISMO'
@@ -25,7 +25,7 @@ import Lista from './lista-jovenes.astro'
                 titulo = 'SIERRAS DE LOS PADRES'
                 img = 'https://images.pexels.com/photos/6271640/pexels-photo-6271640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
                 alt = ''
-                href = ''
+                href = '/sierras'
             />
             <Lista
                 titulo = 'REUNION'
@@ -43,6 +43,10 @@ import Lista from './lista-jovenes.astro'
     </div>
 </section>
 <style>
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
     @media (min-width: 1080px){
         section{
         display: block;
@@ -55,6 +59,8 @@ import Lista from './lista-jovenes.astro'
     }
     ul{
         width: 100%;
+        flex-direction: row;
+        display: flex;
     }
     p{
         width: 400px;

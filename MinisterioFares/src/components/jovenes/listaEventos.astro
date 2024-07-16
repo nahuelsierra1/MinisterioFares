@@ -11,8 +11,28 @@ const {img, alt} = Astro.props
     <img src={img} alt={alt}>
 </li>
 <style>
+    li{
+        width: 350px;
+        height: 400px;
+        margin-bottom: 40px;
+    }
+    li:hover{
+            width: 380px;
+            height: 430px;
+            transition: ease 0.2s;
+
+            img{
+                filter: grayscale(0);
+            }
+        }
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
     @media(min-width: 1080px){
         li{
+            margin: 20px;
             width: 450px;
             height: 600px;
         }

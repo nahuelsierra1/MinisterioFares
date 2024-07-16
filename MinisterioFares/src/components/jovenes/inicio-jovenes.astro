@@ -1,6 +1,5 @@
 ---
 import Header from "../Header.astro"
-import VideoBackground from '../../videos/VideoBackground.mp4'
 ---
 <Header/>
 <section class="flex justify-around">
@@ -28,4 +27,12 @@ import VideoBackground from '../../videos/VideoBackground.mp4'
 		object-fit: cover;
         z-index: -1;
 	}
+    h2{
+        font-size: 60px;
+    }
+    @media (min-width:1080px){
+        h2{
+            font-size: 150px;
+        }
+    }
 </style>

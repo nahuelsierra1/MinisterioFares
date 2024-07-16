@@ -1,7 +1,6 @@
 ---
 import {Image} from 'astro:assets';
 import Logo from '../img/Fares-logo.png';
-import X from '../img/x.svg';
 ---
 <script>
   const boton = document.getElementById('boton');
@@ -27,18 +26,17 @@ import X from '../img/x.svg';
 
 <header>
     <div class="logo" id="logo">
-      <a href="#inicio"><Image src={Logo} alt='Logo de Fares'></Image></a>
+      <a href="/index"><Image src={Logo} alt='Logo de Fares'></Image></a>
     </div>
 
     <div class="flex items-center contenido" id="contenido">
       <nav>
         <ul>
-          <li><a href="#inicio" class="enlace">Inicio</a></li>
-          <li><a href="#ultimapredica" class="enlace">Ultima Predica</a></li>
+          <li><a href="/index" class="enlace">Inicio</a></li>
+          <li><a href="/jovenes" class="enlace">Jovenes</a></li>
           <li><a href="#actividades" class="enlace">Actividades</a></li>
           <li><a href="#eventos" class="enlace">Eventos</a></li>
-          <li><a href="#nuestrospastores" class="enlace">Nuestros Pastores</a></li>
-          <li><a href="#ubicacion" class="enlace">Ubicacion</a></li>
+          <li><a href="/pastores" class="enlace">Nosotros</a></li>
           <li><a href="#contacto" class="enlace">Contacto</a></li>
         </ul>
       </nav>
@@ -65,6 +63,7 @@ import X from '../img/x.svg';
     z-index: 6;
     display: flex;
     justify-content: space-around;
+    background-color: black;
           
     animation: header-pegado linear both;
       animation-timeline: scroll(root);
@@ -72,7 +71,7 @@ import X from '../img/x.svg';
   }
   @keyframes header-pegado {
         to{
-          background: rgb(255, 255, 255);
+          background-color: rgba(0, 0, 0, 0.938);
           height: 50px;
         }
     }
