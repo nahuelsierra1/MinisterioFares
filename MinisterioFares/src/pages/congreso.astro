@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer.astro"
 import Header from "../components/Header.astro"
 ---
 <Header/>
@@ -13,18 +14,50 @@ import Header from "../components/Header.astro"
     </div>
     <div class="lista">
         <ul>
-            <li><img src="#" alt=""></li>
-            <li><img src="#" alt=""></li>
-            <li><img src="#" alt=""></li>
-            <li><img src="#" alt=""></li>
-            <li><img src="#" alt=""></li>
-            <li><img src="#" alt=""></li>
-            <li><img src="#" alt=""></li>
-            <li><img src="#" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/1.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/2.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/3.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/4.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/5.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/6.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/7.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/8.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/9.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/10.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/11.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/12.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/13.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/14.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/15.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/16.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/17.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/18.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/19.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/20.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/21.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/22.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/23.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/24.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/25.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/26.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/27.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/28.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/29.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/30.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/31.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/32.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/33.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/34.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/35.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/36.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/37.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/38.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/39.jpg" alt=""></li>
+            <li><img src="/src/img/jovenes-fotos/congreso/40.jpg" alt=""></li>
         </ul>
     </div>
 </section>
-
+<Footer/>
 <style>
     @media(min-width: 1080px){
         section{
@@ -33,13 +66,14 @@ import Header from "../components/Header.astro"
         .banner{
             width: 100%;
             height: 300px;
-            background-color: red;
+            background-image: url("/src/img/jovenes-fotos/congreso/congreso-banner.jpg");
+            background-attachment: fixed;
+            background-size: cover;
         }
         .lista{
             padding: 100px;
         }
         ul{
-            background-color: green;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -48,7 +82,12 @@ import Header from "../components/Header.astro"
         li{
             width: 400px;
             height: 400px;
-            background-color: blue;
+            overflow: hidden;
+            margin: 3px;
+        }
+        img{
+            width: 100%;
+            height: 400px;
         }
     }
 </style>
